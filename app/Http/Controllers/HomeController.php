@@ -43,7 +43,7 @@ class HomeController extends Controller
         ];
 
         Mail::to($users->mail)->send(new News($details));
-        dd('done');
+//        dd('done');
         return view('dashboard');
     }
 
