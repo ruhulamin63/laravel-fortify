@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 use App\Notifications\WelcomeNotification;
+use App\Mail\News;
 use Illuminate\Http\Request;
 
 use App\Models\User;
 //use Illuminate\Notifications\Notification;
+use Illuminate\Support\Facades\Mail;
 use Notification;
 
 class HomeController extends Controller
@@ -17,12 +19,32 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $user = User::first();
-        Notification::send($user, new WelcomeNotification);
+        $users = User::first();
+//
+//        $post = [
+//            'title' => 'post title',
+//            'slug' => 'post-slug'
+//        ];
+//
+//        Notification::send($users, new WelcomeNotification($post));
 
-        dd('done');
+//        foreach ($users as $user){
+//            dd('test');
+            //dd($post);
+//            $user->notify(new WelcomeNotification($post));
+//            Notification::route('/home', $post)->notify(new WelcomeNotification($post));
+//        }
 
-        //return view('dashboard');
+//        dd('ok');
+
+        $details = [
+          'title' => 'Mail from test',
+          'body' => 'This is a test mail body.'
+        ];
+
+        Mail::to($users->mail)->send(new News($details));
+//        dd('done');
+        return view('dashboard');
     }
 
     /**
