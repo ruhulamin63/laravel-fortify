@@ -14,7 +14,6 @@ jobs:
         with:
           command: |
             cd public_html/fortify/
-#            php artisan migrate
             php artisan migrate:fresh --seed
             php artisan route:clear
             php artisan cache:clear
