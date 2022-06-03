@@ -20,7 +20,7 @@ use App\Http\Controllers\HomeController;
 //});
 
 //change route
-Route::get( '/', [ HomeController::class, 'index' ] )->name( 'dashboard' )->middleware(['auth', 'verified']);
+Route::get( '/login', [ HomeController::class, 'index' ] )->name( 'dashboard' )->middleware(['auth', 'verified']);
 
 //Route::get('/home', function (){
 //
