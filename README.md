@@ -1,120 +1,74 @@
-# Sweet Pagination
+# # Using Fortify Package
 
-**A ReactJS component to render a pagination.**
+** A fortify package using demo project **
 
-By installing this component and writing only a little bit of code you can obtain this:
+![](public/readme-file-photos/welcome page.png)
+![](public/readme-file-photos/register.png)
+![](public/readme-file-photos/login.png)
 
-**Some Styles**
+## # Test mail sent
+**Test sent your mail then create <b style="color:orange">mailtrap</b> account goto link => [`Mailtrap`](https://mailtrap.io/):**
+Add this come for .env file customize for:
 
-<img src="https://raw.githubusercontent.com/jahidulislamzim/sweetpagination/main/Assets/Common-Style.png" alt="Sweet Pagination Style" />
-
-<img src="https://raw.githubusercontent.com/jahidulislamzim/sweetpagination/main/Assets/Style-1.png" alt="Sweet Pagination Style" />
-
-<img src="https://raw.githubusercontent.com/jahidulislamzim/sweetpagination/main/Assets/Style-2.png" alt="Sweet Pagination Style" width=full/>
+```php
+MAIL_MAILER=smtp
+MAIL_HOST=smtp.mailtrap.io
+MAIL_PORT=2525
+MAIL_USERNAME=1d427c59037432
+MAIL_PASSWORD=d1fa90f72ebb35
+MAIL_ENCRYPTION=tls
+```
+**To**
+```php
+MAIL_MAILER=smtp
+MAIL_HOST=smtp.mailtrap.io
+MAIL_PORT=2525
+MAIL_USERNAME=1d427c59037432
+MAIL_PASSWORD=d1fa90f72ebb35
+MAIL_ENCRYPTION=tls
+MAIL_FROM_ADDRESS='noreply@test.com'
+```
+![](public/readme-file-photos/mail.png)
+![](public/readme-file-photos/2-factor-dashboard.png)
 
 
 
 ## Installation
 
-Install [`Sweet Pagination`](https://www.npmjs.com/package/sweetpagination) with npm:
+Install [`Fortyfy Project`](https://www.fortify.rahridoy.com) with php artisan:
 
+```php
+Composer update
+
+Add .env file
+
+php artisan serve
 ```
-npm i sweetpagination --save
-```
-
-## Basic Usage
-
-```javascript
-import React, { useState } from "react";
-import SweetPagination from "sweetpagination";
-
-function Items() {
-  const [currentPageData, setCurrentPageData] = useState(new Array(2).fill());
-  // Example items, to simulate fetching from another resources.
-  const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
-  return (
-    <div>
-      {currentPageData.map((item) => (
-        <div>
-          <h3>Item #{item}</h3>
-        </div>
-      ))}
-
-      <SweetPagination
-        currentPageData={setCurrentPageData}
-        getData={items}
-      />
-    </div>
-  );
-}
+## # Create database
+```php
+php artisan migrate
 ```
 
-## Change Per-Page Data
-**If you want, you can show the data as you wish on the page then follow the code below.**
+## # Create Seeder
+**To get started, `seeder` file add:**
 
-**Add this props `dataPerPage={10}` remember props type always Number.**
-
-```javascript
-      <SweetPagination
-        currentPageData={setCurrentPageData}
-        getData={items}
-        dataPerPage={10}
-      />
+```php
+php artisan migrate:fresh --seed
 ```
 
-## Add Navigation
+## # Can't sent mail
+![](public/readme-file-photos/mail verify.png)
 
-**If you want to add navigation button then follow the code below.**
-**Add this props `navigation={true}` remember props type always Boolean.**
+![](public/readme-file-photos/successful sent email.png)
 
-```javascript
-      <SweetPagination
-        currentPageData={setCurrentPageData}
-        getData={items}
-        dataPerPage={10}
-        navigation={true}
-      />
-```
+## # Can reset Password
+![](public/readme-file-photos/reset password.png)
+![](public/readme-file-photos/reset password.png)
+![](public/readme-file-photos/again reset password.png)
 
-## Add Pre Loaded Style
-**If you want, you can add the pre loaded style then follow the code below.**
-**Add this props `getStyle={'style-1'}` remember props type always String.**
-
-```javascript
-      <SweetPagination
-        currentPageData={setCurrentPageData}
-        getData={items}
-        dataPerPage={10}
-        navigation={true}
-        getStyle={'style-1'}
-      />
-```
-## Available Pre-Loaded Style List
-<ol>
-<li>style-1</li>
-<li>style-2</li>
-</ol>
+## # Can Two factor add
+![](public/readme-file-photos/2-factor-dashboard.png)
+![](public/readme-file-photos/2-factor-authenticate set.png)
 
 
-## Added You Custom Style
-**If you want, you can add your custom style then follow the code below.**
-**Add this props `getStyle={'style-custom'}` remember props type always String.**
-
-```javascript 
-      <SweetPagination
-        currentPageData={setCurrentPageData}
-        getData={items}
-        dataPerPage={10}
-        navigation={true}
-        getStyle={'style-custom'}
-      />
-```
-
-## Add CSS
-
-```css
-    .style-custom{
-      //add your coustom code here
-    }
-```
-Copyright © All rights reserved by [**Jahidul Islam Zim**](https://jahidulislamzim.com/)
+Copyright © All rights reserved by [**rahridoy.com**](https://jahidulislamzim.com/)
