@@ -13,7 +13,7 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
           command: |
-            cd public_html/fortify/
+            cd fortify/
             php artisan migrate
             php artisan route:clear
             php artisan cache:clear
@@ -25,5 +25,5 @@ jobs:
           port: ${{ secrets.port }}
           username: ${{ secrets.ftp_username }}
           password: ${{ secrets.ftp_password }}
-          server-dir: /public_html/fortify/
+          server-dir: /fortify/
 

@@ -19,7 +19,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
+//change route
 Route::get( '/home', [ HomeController::class, 'index' ] )->name( 'dashboard' )->middleware(['auth', 'verified']);
 
 //Route::get('/home', function (){
