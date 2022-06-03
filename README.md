@@ -1,10 +1,9 @@
 # # Using Fortify Package
 
 ** A fortify package using demo project **
+
 ![](public/readme-file-photos/welcome page.png)
-
 ![](public/readme-file-photos/register.png)
-
 ![](public/readme-file-photos/login.png)
 
 ## # Test mail sent
@@ -30,7 +29,6 @@ MAIL_ENCRYPTION=tls
 MAIL_FROM_ADDRESS='noreply@test.com'
 ```
 ![](public/readme-file-photos/mail.png)
-
 ![](public/readme-file-photos/2-factor-dashboard.png)
 
 
@@ -63,12 +61,10 @@ php artisan migrate:fresh --seed
 
 ## # Can reset Password
 ![](public/readme-file-photos/reset password.png)
-
 ![](public/readme-file-photos/successful sent email.png)
 
 ## # Can Two factor add
 ![](public/readme-file-photos/2-factor-dashboard.png)
-
 ![](public/readme-file-photos/2-factor-authenticate set.png)
 
 Copyright © All rights reserved by [**rahridoy.com**](https://jahidulislamzim.com/)
