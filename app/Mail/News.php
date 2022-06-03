@@ -33,7 +33,9 @@ class News extends Mailable
      */
     public function build()
     {
-        $users = User::first();
+        $users = \Illuminate\Support\Facades\Auth::user();
+        //$users = User::auth()->user()->first();
+       // dd($users);
 
 //        foreach ($users as $user){
             return $this
