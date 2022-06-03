@@ -15,12 +15,12 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
 
 
-Route::get( '/home', [ HomeController::class, 'index' ] )->name( 'dashboard' )->middleware(['auth', 'verified']);
+Route::get( '/', [ HomeController::class, 'index' ] )->name( 'dashboard' )->middleware(['auth', 'verified']);
 
 //Route::get('/home', function (){
 //
