@@ -71,4 +71,4 @@ php artisan migrate:fresh --seed
 ![](public/readme-file-photos/2-factor-authenticate set.png)
 
 
-Copyright © All rights reserved by [**rahridoy.com**](https://jahidulislamzim.com/)
+Copyright © All rights reserved by [**rahridoy.com**](https://rahridoy.com/)
